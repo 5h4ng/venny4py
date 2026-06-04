@@ -29,7 +29,7 @@ When installed, import:
 
 **Parameters:**
 
-- ***sets*** - disctionary of sets (required)
+- ***sets*** - dictionary of sets (required)
 - ***out*** - directory to output files, default current directory
 - ***asax*** - if diagram should be plotted as subplot, then provide matplotlib ax here. Default is 'False' which will plot new figure
 - ***ext*** - image extension, default is 'png'.
@@ -41,6 +41,7 @@ When installed, import:
 - ***legend_cols*** - number of legend columns, default is 2.
 - ***column_spacing*** - column spacing in legend, default is 4.
 - ***edge_color*** - edge colors, default is 'black'.
+- ***alpha*** - fill opacity of the sets, default is 0.3.
 
 
 Check "Examples.ipynb" https://github.com/timyerg/venny4py/blob/main/Examples.ipynb to see some examples.
