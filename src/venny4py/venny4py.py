@@ -54,7 +54,8 @@ def venny4py(
         font_size=None,
         legend_cols=2,
         column_spacing=4,
-        edge_color='black'
+        edge_color='black',
+        alpha=0.3
 ):
     if len(sets) < 2 or len(sets) > 4:
         raise ValueError('Number of sets must be 2, 3 or 4')
@@ -96,7 +97,7 @@ def venny4py(
 
         for i, s in enumerate(sets):
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i], 
-                                  angle=ae[i], alpha=.3))
+                                  angle=ae[i], alpha=alpha))
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc='None',
                                   angle=ae[i], ec=ec, lw=lw))
 
@@ -126,7 +127,7 @@ def venny4py(
 
         for i, s in enumerate(sets):
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i], 
-                                  angle=0, alpha=.3))
+                                  angle=0, alpha=alpha))
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc='None',
                                   angle=0, ec=ec, lw=lw))
 
@@ -155,7 +156,7 @@ def venny4py(
 
         for i, s in enumerate(sets):
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i], 
-                                  angle=0, alpha=.3))
+                                  angle=0, alpha=alpha))
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc='None',
                                   angle=0, ec=ec, lw=lw))
 
@@ -173,7 +174,7 @@ def venny4py(
                     transform=ax.transData)
                 
     #legend
-    handles = [mpatches.Patch(color=ce[i], label=l, alpha=.3) for i, l in enumerate(sets)]
+    handles = [mpatches.Patch(color=ce[i], label=l, alpha=alpha) for i, l in enumerate(sets)]
     ax.legend(labels=sets, handles=handles, fontsize=fs*1.1, frameon=False, 
               bbox_to_anchor=(.5, .99), bbox_transform=ax.transAxes, loc=9, 
               handlelength=1.5, ncol=nc, columnspacing=cs, handletextpad=.5)
