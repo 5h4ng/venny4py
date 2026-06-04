@@ -96,8 +96,10 @@ def venny4py(
         ae = [225, 225, 315, 315] #angles
 
         for i, s in enumerate(sets):
-            ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i], 
+            ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i],
                                   angle=ae[i], alpha=alpha))
+
+        for i, s in enumerate(sets):
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc='None',
                                   angle=ae[i], ec=ec, lw=lw))
 
@@ -126,8 +128,10 @@ def venny4py(
         cs = 1 #columns spacing
 
         for i, s in enumerate(sets):
-            ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i], 
+            ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i],
                                   angle=0, alpha=alpha))
+
+        for i, s in enumerate(sets):
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc='None',
                                   angle=0, ec=ec, lw=lw))
 
@@ -155,8 +159,10 @@ def venny4py(
         ye = [45, 45] #y coordinats
 
         for i, s in enumerate(sets):
-            ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i], 
+            ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc=ce[i],
                                   angle=0, alpha=alpha))
+
+        for i, s in enumerate(sets):
             ax.add_artist(Ellipse(xy=(xe[i], ye[i]), width=ew, height=eh, fc='None',
                                   angle=0, ec=ec, lw=lw))
 
